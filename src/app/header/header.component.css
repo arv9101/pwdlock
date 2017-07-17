@@ -1,0 +1,9 @@
+.navbar{
+    background-color: none;     /* BLUE COLOR CODE -->  #1995dc */
+    margin-bottom: 0;
+    border-radius: 0;
+    border-width: 0;
+    z-index: 1;
+    overflow-y:visible;
+     width: 101%;
+}

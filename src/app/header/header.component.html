@@ -1,0 +1,19 @@
+<!-- NAV : User Page -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" [ngStyle]="{ 'background-color': '#1995dc' }">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <span class="navbar-brand" style="font-size:23px;cursor:pointer" [ngStyle]="{'color': 'white'}" *ngIf="!menuBtn" (click)="toggleNav()">&#9776;</span>
+            <span class="navbar-brand" style="font-size:35px;cursor:pointer" [ngStyle]="{'color': 'white'}" *ngIf="menuBtn" (click)="toggleNav()">&times;</span>
+            <span class="navbar-brand" style="font-size:23px;cursor:pointer" [ngStyle]="{'color': 'white'}" >&nbsp; PwdLock</span>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a *ngIf='currentUser' [ngStyle]="{'color': 'white'}">
+                  <span class="glyphicon glyphicon-user"></span> &nbsp;{{currentUser}}&nbsp;&nbsp;</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  <!-- END of NAV : User Page -->

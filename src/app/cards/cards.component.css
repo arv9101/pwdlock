@@ -1,0 +1,110 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+#main {
+    transition: margin-left .3s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    transition: 0.3s;
+    width: 400px;
+    z-index: -1;
+    /* display: inline-block;*/
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.2);
+    z-index: -1;
+}
+
+/* Add some padding inside the card container */
+.container-card {
+    padding: 2px 16px;
+    width: 230px;
+    z-index: -1;
+}
+
+
+input[id='key'] {
+    position: fixed;
+    z-index: 2;
+    margin: -7px 180px;
+    width: 190px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[id='key']:focus {
+    position: fixed;
+    width: 60%;
+}
+
+input[id='bank'] {
+    position: absolute;
+    margin: -230px 190px;
+    width: 190px;
+}
+input[id='digits'] {
+    position: absolute;
+    margin: -127px 30px;
+    width: 330px;
+}
+input[id='exp'] {
+    position: absolute;
+    margin: -85px 170px;
+    width: 100px;
+}
+input[id='nameoncard'] {
+    position: absolute;
+    margin: -52px 30px;
+    width: 200px;
+}
+.btn{
+    margin: 0px 140px;
+}
+
+.list{
+    border: none;
+}
+.glyphicon-eye-open{
+    font-size: 18px;
+    color: black;
+    margin-top: 5px;
+}
+ .glyphicon-remove{
+     color: red;
+     font-size: 15px;
+     margin-top: 10px;
+ }

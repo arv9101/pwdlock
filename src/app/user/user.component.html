@@ -1,0 +1,61 @@
+<div id="mySidenav" class="sidenav" [style.width.px]="width"><br>
+  <a href="/user">Websites</a>
+  <a href="/user/cards">Cards</a>
+  <a href="/user/dashboard">Dashboard</a>
+  <a href="/">Logout</a>
+</div>
+
+<div class="form-group">
+    <input type="password" id="key" name='key' class="form-control" autocomplete="off" placeholder="Insert Your Key Here" [(ngModel)]='key' maxlength="20">
+</div>
+
+<div id="main" [style.margin-left.px]="width">
+  <app-header (marginleft)="width = $event"></app-header>
+  <br><br><br>
+
+    <!-- Table -->
+    <table class="table table-striped" >
+
+        <tr class="info">
+        <th width='3%'></th>
+        <th width='25%'>Website Name</th>
+        <th width='30%'>Username</th>
+        <th width='30%'>Password</th>
+        <th width='5%'></th>
+        </tr>
+
+        <tr *ngFor='let site of sites; let i = index'>
+        <td><span class="glyphicon glyphicon-remove" (click)='delWebsite(site.website)'></span></td>
+        <td><input type='text' class='form-control list' value='{{site.website}}'></td>
+        <td><input type='text' class='form-control list' value='{{site.uname}}'></td>
+        <td><input type='text' class='form-control list' value='{{site.pwd}}'></td>
+        <td>&nbsp;&nbsp;<span class="glyphicon glyphicon-eye-open" (click)='show(site.website, site.uname, site.pwd, key, i)'></span></td>
+        </tr>
+
+        <tr class="warning">
+        <th></th>
+        <th>
+            <div class="input-group">
+            <input type="text" class="form-control" placeholder="Website" [(ngModel)]='newWebsite' autocomplete="off" maxlength="20">
+            </div>
+        </th>
+        <th>
+            <div class="input-group">
+            <input type="text" class="form-control" placeholder="Username" [(ngModel)]='newUname' autocomplete="off" maxlength="20">
+            </div>
+        </th>
+        <th>
+            <div class="input-group">
+            <input type="text" class="form-control" placeholder="Password" [(ngModel)]='newPwd' autocomplete="off" maxlength="25">
+            </div>
+        </th>
+        <th>
+            <button type="submit" (click)='addNewWebsite(newWebsite, newUname, newPwd, key, newAlgorithm)' class="btn btn-success btn-sm">Add</button>
+        </th>
+        </tr>
+
+    </table>
+    <!-- END of Table -->
+
+
+</div>

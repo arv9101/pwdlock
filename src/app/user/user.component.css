@@ -1,0 +1,73 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+#main {
+    transition: margin-left .3s;
+    padding: 16px;
+    width: 100%;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.backgroundImage{
+    position: fixed;
+    z-index: -1;
+    width: 101%;
+    height: 100%;
+}
+
+input[id='key'] {
+    position: fixed;
+    z-index: 2;
+    margin: -7px 180px;
+    width: 190px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[id='key']:focus {
+    position: fixed;
+    width: 60%;
+}
+
+.glyphicon-eye-open{
+    font-size: 18px;
+    color: black;
+    margin-top: 5px;
+}
+ .glyphicon-remove{
+     color: red;
+     font-size: 15px;
+     margin-top: 10px;
+ }
+.enctype{
+    height: 30px;
+}
+.list{
+    border: none;
+}
